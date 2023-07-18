@@ -10,8 +10,8 @@ function MusicPlayer() {
     <group position={[0, 1.5, -0.4]} scale={1 / 1200}>
       <FontFamilyProvider
         fontFamilies={{
-          medium: ["/fonts/", "Inter-Medium.json"],
-          bold: ["/fonts/", "Inter-Bold.json"],
+          medium: ["https://coconut-xr.github.io/msdf-fonts/", "inter.json"],
+          bold: ["https://coconut-xr.github.io/msdf-fonts/", "inter-bold.json"],
         }}
         defaultFontFamily="medium"
       >
