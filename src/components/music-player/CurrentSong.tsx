@@ -15,7 +15,7 @@ function CurrentSong() {
       padding={6}
     >
       <Suspense>
-        <Image url="/images/4.jpg" height="100%" borderRadius={4} />
+        <Image url="images/4.jpg" height="100%" borderRadius={4} />
         <Container flexDirection="column" justifyContent="center" flexGrow={1}>
           <Text fontFamily="bold" fontSize={14} color="white">
             Binary Dreams

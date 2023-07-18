@@ -9,8 +9,8 @@ import { Suspense, useState } from "react";
 import SidebarItem from "./SidebarItem";
 
 const playlists = [
-  { image: "/images/8.jpg", name: "Love Songs" },
-  { image: "/images/3.jpg", name: "Mercury" },
+  { image: "images/8.jpg", name: "Love Songs" },
+  { image: "images/3.jpg", name: "Mercury" },
 ];
 
 function Playlists() {
