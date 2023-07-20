@@ -39,7 +39,7 @@ function App() {
         <MusicPlayer />
         <IncludeWhenInSessionMode deny="immersive-ar">
           <Suspense>
-            <Environment files="skybox/apartment_4k.hdr" background />
+            <Environment blur={0.05} files="skybox/apartment_4k.hdr" background />
           </Suspense>
         </IncludeWhenInSessionMode>
         <ImmersiveSession />
