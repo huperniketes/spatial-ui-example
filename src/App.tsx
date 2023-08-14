@@ -12,8 +12,7 @@ import { AppProviders } from "./providers";
 
 function App() {
   const [state, setState] = useState<"hide" | "enter-dialog" | "VR" | "AR">(
-    // "enter-dialog",
-    "hide",
+    "enter-dialog",
   );
 
   const frameBufferScaling = useNativeFramebufferScaling();
