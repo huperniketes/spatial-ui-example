@@ -31,7 +31,8 @@ h3 {
   cursor: pointer;
 }
 
-a:hover, .xr-button:hover {
+a:hover,
+.xr-button:hover {
   background: hsla(0, 0%, 30%, 0.8);
 }
 
