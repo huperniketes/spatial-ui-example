@@ -1,32 +1,25 @@
-import { getInputSourceId } from "@coconut-xr/natuerlich";
-import { PointerController, TouchHand } from "@coconut-xr/natuerlich/defaults";
-import {
-  ImmersiveSessionOrigin,
-  useInputSources,
-} from "@coconut-xr/natuerlich/react";
+import { Layout } from "@/features/layout";
+import { RootContainer } from "@coconut-xr/koestlich";
+import { Controllers, Hands } from "@coconut-xr/natuerlich/defaults";
+import { ImmersiveSessionOrigin } from "@coconut-xr/natuerlich/react";
 
 function ImmersiveSession() {
-  const inputSources = useInputSources();
-
   return (
     <ImmersiveSessionOrigin>
-      {inputSources.map((inputSource) =>
-        inputSource.hand != null ? (
-          <TouchHand
-            cursorOpacity={1}
-            key={getInputSourceId(inputSource)}
-            id={getInputSourceId(inputSource)}
-            inputSource={inputSource}
-            hand={inputSource.hand}
-          />
-        ) : (
-          <PointerController
-            key={getInputSourceId(inputSource)}
-            id={getInputSourceId(inputSource)}
-            inputSource={inputSource}
-          />
-        ),
-      )}
+      <Hands type="touch" />
+      <Controllers type="pointer" />
+      <group position={[0, 1.2, -0.8]}>
+        <RootContainer
+          anchorX="center"
+          anchorY="center"
+          pixelSize={1 / 1000}
+          sizeX={1.3}
+          sizeY={0.8}
+          dragThreshold={32}
+        >
+          <Layout />
+        </RootContainer>
+      </group>
     </ImmersiveSessionOrigin>
   );
 }

@@ -24,6 +24,7 @@ export function Artists() {
             artist={artist}
             flexBasis={180}
             flexGrow={1}
+            maxWidth={220}
           />
         ))}
       </Container>

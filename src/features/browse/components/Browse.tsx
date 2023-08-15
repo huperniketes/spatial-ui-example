@@ -25,7 +25,12 @@ export function Browse() {
           marginBottom={24}
         >
           {albums.slice(0, 6).map((album) => (
-            <AlbumCard album={album} flexBasis={240} showArtist />
+            <AlbumCard
+              key={album.id}
+              album={album}
+              flexBasis={240}
+              showArtist
+            />
           ))}
         </Container>
         <Text marginBottom={8} fontSize={20} fontFamily="bold" paddingX={24}>
@@ -38,7 +43,12 @@ export function Browse() {
           paddingX={16}
         >
           {albums.slice(6, 12).map((album) => (
-            <AlbumCard album={album} flexBasis={240} showArtist />
+            <AlbumCard
+              key={album.id}
+              album={album}
+              flexBasis={240}
+              showArtist
+            />
           ))}
         </Container>
       </Container>

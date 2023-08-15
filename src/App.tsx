@@ -5,7 +5,7 @@ import {
   useHeighestAvailableFrameRate,
   useNativeFramebufferScaling,
 } from "@coconut-xr/natuerlich/react";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Background } from "./components/Background";
 import { NonImmersiveSession } from "./components/NonImmersiveSession";
 import { AppProviders } from "./providers";
@@ -32,8 +32,10 @@ function App() {
       >
         <directionalLight position={[-2, 2, 2]} intensity={1.6} />
         <Background />
-        <ImmersiveSession />
-        <NonImmersiveSession />
+        <Suspense>
+          <ImmersiveSession />
+          <NonImmersiveSession />
+        </Suspense>
       </XRCanvas>
     </AppProviders>
   );
