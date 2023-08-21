@@ -1,7 +1,10 @@
 import {} from "@coconut-xr/natuerlich/defaults";
 import { useEnterXR, useSessionSupported } from "@coconut-xr/natuerlich/react";
 
-const settings = { requiredFeatures: ["local-floor", "hand-tracking"] };
+const settings: XRSessionInit = {
+  requiredFeatures: ["local-floor"],
+  optionalFeatures: ["hand-tracking"],
+};
 
 export function EnterDialog({
   setState,
