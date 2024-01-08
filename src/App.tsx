@@ -2,10 +2,12 @@ import { PerspectiveCamera } from "three";
 import MusicPlayer from "./components/music-player/MusicPlayer";
 import { Canvas, useThree } from "@react-three/fiber";
 import { Suspense, useState } from "react";
+// import { StyleSheet } from "react-native";
 import { Container, FontFamilyProvider, Image, PlatformConstants, RootContainer, Text } from "@coconut-xr/koestlich";
 import { Slider } from "@coconut-xr/apfel-kruemel";
 import { TextureLoader } from "expo-three"
 const image = "images/1.jpg";
+import { registerRootComponent } from "expo";
 
 // PlatformConstants.TextureLoader = TextureLoader;
 
@@ -157,4 +159,4 @@ function UI() {
   );
 }
 
-export default App;
+export default registerRootComponent(App);
